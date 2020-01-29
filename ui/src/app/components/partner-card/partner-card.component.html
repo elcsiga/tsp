@@ -1,0 +1,7 @@
+<nz-card>
+    <nz-card-meta [nzAvatar]="avatarTemplate" [nzTitle]="partner.name" [nzDescription]="partner.line"></nz-card-meta>
+</nz-card>
+
+<ng-template #avatarTemplate>
+    <nz-avatar [nzSrc]="partner.thumbnail"></nz-avatar>
+</ng-template>

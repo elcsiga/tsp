@@ -1,1 +1,6 @@
-{{partners$ | async | json}}
+<div nz-row [nzGutter]="8">
+    <div nz-col [nzSpan]="8" *ngFor="let partner of partners$ | async">
+        <app-partner-card [partner]="partner">
+        </app-partner-card>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<h1>
+    <a [routerLink]="['/projects']">Projects</a>
+</h1>
+
+<kit-data-container
+    [input]="projects$"
+    [dataTemplate]="dataTemplate"
+>
+    <ng-template #dataTemplate let-data="data">
+        <kit-animated-list
+            [items]="getUnifiedProjectList(data)"
+            [itemTemplate]="itemTemplate"
+        >
+            <ng-template #itemTemplate let-item='item'>
+                <div class="project-card">
+                    <a [routerLink]="['/project', item.id]">{{item.name}}</a>
+                </div>
+            </ng-template>
+
+        </kit-animated-list>
+    </ng-template>
+</kit-data-container>
