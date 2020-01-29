@@ -8,7 +8,7 @@ import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { EntityDataModule } from '@ngrx/data';
-import { entityConfig } from './entity-metadata';
+import { entityConfig } from './entities/entity-metadata';
 import { HttpClientModule } from '@angular/common/http';
 import { IconsProviderModule } from './icons-provider.module';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
