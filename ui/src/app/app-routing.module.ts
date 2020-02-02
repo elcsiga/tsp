@@ -6,13 +6,29 @@ import { ProjectsModule } from './pages/projects/projects.module';
 import { PartnersModule } from './pages/partners/partners.module';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/projects' },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'projects/:projectId', component: ProjectsComponent },
-  { path: 'partners', component: PartnersComponent }
+  { path: '', pathMatch: 'full', redirectTo: '/project' },
+  {
+    path: 'project',
+    component: ProjectsComponent,
+    data: {
+      breadcrumb: 'Projects'
+    }
+  },
+  { 
+    path: 'project/:projectId',
+    component: ProjectsComponent,
+    data: {
+      breadcrumb: 'XXXXXXXXXX'
+    }
+  },
+  {
+    path: 'partner',
+    component: PartnersComponent,
+    data: {
+      breadcrumb: 'Partners'
+    }
+  }
 ];
-
-
 
 export class CustomReuseStrategy implements RouteReuseStrategy {
 

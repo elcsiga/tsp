@@ -8,7 +8,6 @@ import { Project } from 'src/app/entities/types';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project;
-  
   constructor() { }
 
   ngOnInit() {

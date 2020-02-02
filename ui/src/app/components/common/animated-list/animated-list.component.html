@@ -1,15 +1,12 @@
-<div class='list'>
-    <div class="flowerContainer" #flowerContainer
-         *ngFor="let item of items; trackBy: trackById"
-         [@flyInOut]
-         (@flyInOut.start)="onFlyInOutStart()"
-         (@flyInOut.done)="onFlyInOutDone()"
-
-    >
-        <div class="flower" #flower>
-            <div class="transformer">
-                <div class="item">
-                    <ng-container *ngTemplateOutlet="itemTemplate; context: {item: item}"></ng-container>
+<div class='container' #container>
+    <div #list class='list'>
+        <div class="flowerContainer" [ngStyle]="sizes" #flowerContainer *ngFor="let item of items; trackBy: trackById"
+            [@flyInOut] (@flyInOut.start)="onFlyInOutStart()" (@flyInOut.done)="onFlyInOutDone()">
+            <div class="flower" #flower>
+                <div class="transformer">
+                    <div class="item">
+                        <ng-container *ngTemplateOutlet="itemTemplate; context: {item: item}"></ng-container>
+                    </div>
                 </div>
             </div>
         </div>

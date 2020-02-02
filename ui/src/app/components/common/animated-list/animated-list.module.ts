@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AnimatedListComponent } from "./animated-list.component";
+import { AnimatedListComponent } from './animated-list.component';
 
 
 @NgModule({
@@ -15,5 +15,5 @@ import { AnimatedListComponent } from "./animated-list.component";
     ]
 
 })
-export class KitAnimatedListModule {
+export class AnimatedListModule {
 }

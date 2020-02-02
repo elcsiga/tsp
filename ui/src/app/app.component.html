@@ -16,35 +16,33 @@
       <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/projects">Projects</a>
+            <a routerLink="/project">Projects</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/partners">Partners</a>
+            <a routerLink="/partner">Partners</a>
           </li>
         </ul>
       </li>
     </ul>
   </nz-sider>
   <nz-layout>
-    <!--
     <nz-header>
       <div class="app-header">
+    
+        <!--
+        <nz-breadcrumb [nzAutoGenerate]="true">
+        </nz-breadcrumb>
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
             <i class="trigger"
                nz-icon
                [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             ></i>
         </span>
+        -->
       </div>
     </nz-header>
     <nz-content>
-      <div class="inner-content">
-        <router-outlet></router-outlet>
-      </div>
-    </nz-content>
-    -->
-    <div class="inner-content">
       <router-outlet></router-outlet>
-    </div>
+    </nz-content>
   </nz-layout>
 </nz-layout>

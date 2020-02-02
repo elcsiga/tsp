@@ -1,6 +1,10 @@
-<div nz-row [nzGutter]="8">
-    <div nz-col [nzSpan]="8" *ngFor="let project of projects$ | async">
-        <app-project-card [project]="project">
+<kit-animated-list [items]="projects$ | async" [itemTemplate]="itemTemplate">
+    <ng-template #itemTemplate let-item='item'>
+        <app-project-card [project]="item">
         </app-project-card>
-    </div>
+    </ng-template>
+</kit-animated-list>
+
+<div *ngIf="projectId$ | async as projectId">
+    PROJECT {{projectId}}
 </div>
