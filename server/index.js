@@ -3,6 +3,7 @@ const jsonServer = require('json-server');
 const db = {
   projects: require('./db/projects.js'),
   partners: require('./db/partners.js'),
+  participants: require('./db/participants.js'),
   users: require('./db/users.js')
 };
 
