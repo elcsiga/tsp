@@ -38,3 +38,11 @@ export interface Partner {
   thumbnail: ImageUrl;
   address: Address;
 }
+
+
+export interface Participant {
+  id: UUID;
+  projectId: UUID;
+  partnerId: UUID;
+  line: string;
+}

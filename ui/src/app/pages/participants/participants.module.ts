@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsComponent } from './projects.component';
-import { ProjectCardModule } from 'src/app/components/project-card/project-card.module';
+import { ParticipantsComponent } from './participants.component';
+import { ParticipantCardModule } from 'src/app/components/participant-card/participant-card.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AnimatedListModule } from 'src/app/components/common/animated-list/animated-list.module';
 import { RouterModule } from '@angular/router';
-import { ParticipantsModule } from '../participants/participants.module';
+
+
 
 @NgModule({
-  declarations: [ProjectsComponent],
+  declarations: [ParticipantsComponent],
   imports: [
     CommonModule,
-    ProjectCardModule,
+    ParticipantCardModule,
     NgZorroAntdModule,
     AnimatedListModule,
-    RouterModule,
-
-    ParticipantsModule
+    RouterModule
+  ], exports: [
+    ParticipantsComponent
   ]
 })
-export class ProjectsModule { }
+export class ParticipantsModule { }

@@ -15,6 +15,7 @@ module.exports = {
     count: {
         project: 5,
         partner: 10,
-        user: 20
+        user: 20,
+        participant: 20
     }
 };

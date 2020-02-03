@@ -14,7 +14,7 @@ const routes: Routes = [
       breadcrumb: 'Projects'
     }
   },
-  { 
+  {
     path: 'project/:projectId',
     component: ProjectsComponent,
     data: {

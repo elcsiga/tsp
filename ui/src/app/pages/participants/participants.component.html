@@ -1,0 +1,10 @@
+<kit-animated-list [items]="participants$ | async" [itemTemplate]="itemTemplate">
+  <ng-template #itemTemplate let-item='item'>
+      <app-participant-card [participant]="item">
+      </app-participant-card>
+  </ng-template>
+</kit-animated-list>
+
+<div *ngIf="participantId$ | async as participantId">
+  participant {{participantId}}
+</div>
